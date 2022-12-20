@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const BookSearch = ({ onSearchData }) => {
   return (
     <div className="search-books">
       <div className="search-books-bar">
-        <NavLink className="close-search" to="/books">
+        <NavLink className="close-search" to="/">
           close
         </NavLink>
         <div className="search-books-input-wrapper">

@@ -4,9 +4,12 @@ import { getAll, update } from "../BooksAPI";
 import { NavLink } from "react-router-dom";
 const BookShelvesPage = () => {
   const [books, setBooks] = useState([]);
-  useEffect(async () => {
-    let response = await getAll();
-    setBooks(response);
+  useEffect(() => {
+    const fetch = async () => {
+      let response = await getAll();
+      setBooks(response);
+    };
+    fetch();
   }, []);
   const onShelfEdit = async (book, shelf) => {
     await update(book, shelf);
